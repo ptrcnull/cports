@@ -1,6 +1,6 @@
 pkgname = "gaypaste"
 pkgver = "1.2.1"
-pkgrel = 0
+pkgrel = 1
 build_style = "go"
 hostmakedepends = ["go"]
 pkgdesc = "Paste"
@@ -14,3 +14,5 @@ options = ["!check"]
 
 def post_install(self):
     self.install_license("LICENCE")
+    self.install_sysusers(self.files_path / "sysusers.conf")
+    self.install_service(self.files_path / "gaypaste")

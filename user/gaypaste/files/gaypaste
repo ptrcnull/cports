@@ -1,0 +1,6 @@
+type = process
+command = /usr/bin/gaypaste
+working-dir = /tmp
+depends-on = local.target
+depends-on = network.target
+run-as = _gaypaste
